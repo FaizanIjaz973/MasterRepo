@@ -1,10 +1,12 @@
 package com.example.masterrepo
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +24,9 @@ class RecyclerViewAdapter(): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder
             return oldItem == newItem
         }
     }
+
+    private var _clickedItem = MutableLiveData<Class<AppCompatActivity>>()
+    var clickedItem : LiveData<Class<AppCompatActivity>> = _clickedItem
 
     private val recyclerListDiffer = AsyncListDiffer(this, diffUtil)
 
@@ -43,7 +48,7 @@ class RecyclerViewAdapter(): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder
             descriptionTextView.text = entry.description
 
             setOnClickListener(View.OnClickListener {
-                Log.d("RecyclerView", entry.title + " is clicked!")
+                _clickedItem.postValue(entry.c)
             })
         }
     }

@@ -7,12 +7,15 @@ It contains the navigation point of all the modules for the application in cards
 */
 package com.example.masterrepo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val logTag = "MainActivity"
     lateinit var recyclerView: RecyclerView
@@ -27,5 +30,10 @@ class MainActivity : AppCompatActivity() {
         adapter.entries = Constants.entries
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        adapter.clickedItem.observe(this, Observer{
+            startActivity(Intent(this, it))
+            //startActivity(Intent(this, RoomActivity::class.java ))
+        })
     }
 }

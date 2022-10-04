@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/activity_main.xml" value="0.23939393939393938" />
+        <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/activity_retrofit.xml" value="0.264" />
+        <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/activity_room.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/dialog_room.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/dialogbox_activity_room.xml" value="0.2" />
+        <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/room_recyclerview_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Faizan Work Laptop/Desktop/MasterRepo/app/src/main/res/layout/row.xml" value="0.23867753623188406" />
       </map>
     </option>
