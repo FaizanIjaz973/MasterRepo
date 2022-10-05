@@ -67,7 +67,5 @@ class RoomViewModelTest(){
         val entity = Entity("John", "Doe", 32, 'M', id)
         roomViewModel.delete(entity)
         assertThat(roomViewModel.allEntries.getOrAwaitValueTest()).doesNotContain(entity)
-
-        // In branch RoomActivityTests
     }
 }

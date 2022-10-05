@@ -111,11 +111,12 @@ class RoomActivity : AppCompatActivity() {
         builder.setPositiveButton("Yes",
             DialogInterface.OnClickListener { dialog, id ->
                 roomViewModel.delete(it)
+                dialog.dismiss()
             })
-        builder.setNegativeButton("No", DialogInterface.OnClickListener {dialog, id -> })
+        builder.setNegativeButton("No", DialogInterface.OnClickListener {dialog, id ->
+            dialog.dismiss()})
         builder.show()
 
-        Log.d("RoomDataBaseItemClicked" ,"Item clicked : " + it.toString())
         })
     }
 }
