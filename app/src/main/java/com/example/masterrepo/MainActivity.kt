@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         //Initializing recyclerview
         recyclerView = findViewById(R.id.recyclerViewMainActivity)
-        var adapter = RecyclerViewAdapter()
+        val adapter = RecyclerViewAdapter()
         adapter.entries = Constants.entries
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
