@@ -1,7 +1,7 @@
 package com.example.masterrepo
 
 import androidx.appcompat.app.AppCompatActivity
-import com.example.masterrepo.retrofit.RetrofitActivity
+import com.example.masterrepo.retrofit.view.RetrofitActivity
 import com.example.masterrepo.room.view.RoomActivity
 
 object Constants {

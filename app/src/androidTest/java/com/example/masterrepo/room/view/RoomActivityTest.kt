@@ -31,7 +31,7 @@ class RoomActivityTest{
     fun insertionAndDeletion(){
 
         // Launching the room database Activity
-        val scenario = ActivityScenario.launch(RoomActivity::class.java)
+        ActivityScenario.launch(RoomActivity::class.java)
         // Performing click on the Add Entry Button
         Espresso.onView(withId(R.id.roomActivity_button_add)).perform(click())
         // Verifying if the dialog box to take the entry information is displayed
