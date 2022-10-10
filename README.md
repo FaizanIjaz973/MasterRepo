@@ -1,1 +1,2 @@
 # MasterRepo
+This is aimed to to be a master repo which would contain different snippets of code relating to the mostly used features in any professionally developed android app ranging from basic recyclerview implementations to retrofit usage. It is designed to follow the best practices like dependency injection using dagger hilt and MVVM clean architecture. Moreover, best effort is made to add the unit and UI tests as well to keep the development cycle adherent to the automated testing. 
