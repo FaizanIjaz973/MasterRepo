@@ -3,6 +3,7 @@ package com.example.masterrepo
 import androidx.appcompat.app.AppCompatActivity
 import com.example.masterrepo.retrofit.view.RetrofitActivity
 import com.example.masterrepo.room.view.RoomActivity
+import com.example.masterrepo.sharedatawithotherapps.view.ShareDataWithOtherAppsActivity
 
 object Constants {
     val entries = listOf<CardEntry>(
@@ -14,6 +15,10 @@ object Constants {
         CardEntry("Retrofit",
             "Deals with fetching data from API",
             RetrofitActivity::class.java as Class<AppCompatActivity>
+        ),
+        CardEntry("ShareData",
+            "Share data with external apps",
+            ShareDataWithOtherAppsActivity::class.java as Class<AppCompatActivity>
         )
     )
 }

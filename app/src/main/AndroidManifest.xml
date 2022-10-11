@@ -25,6 +25,18 @@
 
         <activity android:name=".room.view.RoomActivity"></activity>
         <activity android:name=".retrofit.view.RetrofitActivity"></activity>
+        <activity
+            android:name=".sharedatawithotherapps.view.ShareDataWithOtherAppsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".sharedatawithotherapps.MyBroadCastReceiver" android:exported="true"></receiver>
+
     </application>
 
 </manifest>
