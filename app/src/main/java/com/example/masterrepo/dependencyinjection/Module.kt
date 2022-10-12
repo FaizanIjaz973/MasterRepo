@@ -2,6 +2,8 @@ package com.example.masterrepo.dependencyinjection
 
 import android.content.Context
 import androidx.room.Room
+import com.example.masterrepo.readwritefromresource.repository.ReadWriteFromResourceRepo
+import com.example.masterrepo.readwritefromresource.repository.ReadWriteFromResourceRepoImpl
 import com.example.masterrepo.retrofit.api.RetrofitApi
 import com.example.masterrepo.retrofit.repository.RetrofitRepoImplementation
 import com.example.masterrepo.retrofit.repository.RetrofitRepoInterface
@@ -48,4 +50,8 @@ object Module {
     @Provides
     @Singleton
     fun injectRetrofitRepo(retrofit: RetrofitApi) = RetrofitRepoImplementation(retrofit) as RetrofitRepoInterface
+
+    @Provides
+    @Singleton
+    fun injectReadWriteFromResourceRepo(@ApplicationContext context: Context) = ReadWriteFromResourceRepoImpl(context) as ReadWriteFromResourceRepo
 }

@@ -6,9 +6,11 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.masterrepo.R
+import com.example.masterrepo.readwritefromresource.viewmodel.ReadWriteFromResourceViewModel
 import com.example.masterrepo.retrofit.repository.RetrofitRepoImplementation
 import com.example.masterrepo.retrofit.viewmodel.RetrofitViewModel
 import com.example.masterrepo.util.EspressoIdlingResource
@@ -18,10 +20,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class RetrofitActivity : AppCompatActivity() {
 
-    private lateinit var retrofitViewModel: RetrofitViewModel
-
-    @Inject
-    lateinit var repoImplementation: RetrofitRepoImplementation
+    private val retrofitViewModel: RetrofitViewModel by viewModels()
 
     // Views
     lateinit var textCatFact : TextView
@@ -31,9 +30,6 @@ class RetrofitActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_retrofit)
-
-        // Initializing View Model
-        retrofitViewModel = RetrofitViewModel(repoImplementation)
 
         // Subscribing to the observers in viewModel
         subscribeToObservers()

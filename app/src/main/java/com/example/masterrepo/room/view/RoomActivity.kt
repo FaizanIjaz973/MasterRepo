@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterrepo.R
@@ -25,10 +27,7 @@ import kotlin.random.Random.Default.nextInt
 @AndroidEntryPoint
 class RoomActivity : AppCompatActivity() {
 
-    private lateinit var roomViewModel: RoomViewModel
-
-    @Inject
-    lateinit var repoImplementation: RepoImplementation
+    private val roomViewModel: RoomViewModel by viewModels()
 
     @Inject
     lateinit var roomRecyclerViewAdapter: RoomRecyclerViewAdapter
@@ -44,9 +43,6 @@ class RoomActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.roomActivity_recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = roomRecyclerViewAdapter
-
-        // Initializing View Model
-        roomViewModel = RoomViewModel(repoImplementation)
 
         // Button that saves the entry to the room db
         val buttonAdd = findViewById<Button>(R.id.roomActivity_button_add)
