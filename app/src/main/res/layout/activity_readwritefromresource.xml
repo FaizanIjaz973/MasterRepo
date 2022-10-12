@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/readwritefromresourceActivity_editText"
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:layout_height="240dp">
+    </EditText>
+
+    <Button
+        android:id="@+id/readwritefromresourceActivity_buttonWrite"
+        android:text="Write to File"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <TextView
+        android:padding="12dp"
+        android:id="@+id/readwritefromresourceActivity_txtView"
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:layout_height="240dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/readwritefromresourceActivity_buttonRead"
+        android:text="read from file"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+</LinearLayout>

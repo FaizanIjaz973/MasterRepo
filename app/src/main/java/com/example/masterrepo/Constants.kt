@@ -1,6 +1,7 @@
 package com.example.masterrepo
 
 import androidx.appcompat.app.AppCompatActivity
+import com.example.masterrepo.readwritefromresource.view.ReadWriteFromResourceActivity
 import com.example.masterrepo.retrofit.view.RetrofitActivity
 import com.example.masterrepo.room.view.RoomActivity
 import com.example.masterrepo.sharedatawithotherapps.view.ShareDataWithOtherAppsActivity
@@ -19,6 +20,10 @@ object Constants {
         CardEntry("ShareData",
             "Share data with external apps",
             ShareDataWithOtherAppsActivity::class.java as Class<AppCompatActivity>
-        )
+        ),
+        CardEntry("ReadWriteResource",
+            "Read from and write to the resource",
+            ReadWriteFromResourceActivity::class.java as Class<AppCompatActivity>
+    )
     )
 }
