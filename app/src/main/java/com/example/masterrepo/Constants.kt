@@ -1,6 +1,7 @@
 package com.example.masterrepo
 
 import androidx.appcompat.app.AppCompatActivity
+import com.example.masterrepo.audioplayfromlocalstorage.AudioPlayFromLocalStorageActivity
 import com.example.masterrepo.readwritefromresource.view.ReadWriteFromResourceActivity
 import com.example.masterrepo.retrofit.view.RetrofitActivity
 import com.example.masterrepo.room.view.RoomActivity
@@ -29,6 +30,10 @@ object Constants {
         CardEntry("VideoPlayFromLocalStorage",
             "Plays video stored in the local storage",
             VideoPlayFromLocalStorageActivity::class.java as Class<AppCompatActivity>
+        ),
+        CardEntry("AudioPlayFromLocalStorage",
+            "Plays audio stored in the local storage",
+            AudioPlayFromLocalStorageActivity::class.java as Class<AppCompatActivity>
         ),
     )
 }
