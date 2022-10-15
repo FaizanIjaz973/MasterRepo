@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:usesCleartextTraffic="true"
         android:name=".BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,6 +29,7 @@
         <activity android:name=".readwritefromresource.view.ReadWriteFromResourceActivity"></activity>
         <activity android:name=".videoplayfromlocalstorage.VideoPlayFromLocalStorageActivity"></activity>
         <activity android:name=".audioplayfromlocalstorage.AudioPlayFromLocalStorageActivity"></activity>
+        <activity android:name=".videostreamfrominternet.VideoStreamFromInternet"></activity>
 
         <activity
             android:name=".sharedatawithotherapps.view.ShareDataWithOtherAppsActivity"

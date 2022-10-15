@@ -7,6 +7,7 @@ import com.example.masterrepo.retrofit.view.RetrofitActivity
 import com.example.masterrepo.room.view.RoomActivity
 import com.example.masterrepo.sharedatawithotherapps.view.ShareDataWithOtherAppsActivity
 import com.example.masterrepo.videoplayfromlocalstorage.VideoPlayFromLocalStorageActivity
+import com.example.masterrepo.videostreamfrominternet.VideoStreamFromInternet
 
 object Constants {
     val entries = listOf<CardEntry>(
@@ -34,6 +35,10 @@ object Constants {
         CardEntry("AudioPlayFromLocalStorage",
             "Plays audio stored in the local storage",
             AudioPlayFromLocalStorageActivity::class.java as Class<AppCompatActivity>
+        ),
+        CardEntry("VideoStreamFromInternet",
+            "Streams video from a URL",
+            VideoStreamFromInternet::class.java as Class<AppCompatActivity>
         ),
     )
 }
