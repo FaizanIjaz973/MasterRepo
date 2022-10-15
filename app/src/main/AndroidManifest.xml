@@ -27,6 +27,7 @@
         <activity android:name=".retrofit.view.RetrofitActivity"></activity>
         <activity android:name=".readwritefromresource.view.ReadWriteFromResourceActivity"></activity>
         <activity android:name=".videoplayfromlocalstorage.VideoPlayFromLocalStorageActivity"></activity>
+        <activity android:name=".audioplayfromlocalstorage.AudioPlayFromLocalStorageActivity"></activity>
 
         <activity
             android:name=".sharedatawithotherapps.view.ShareDataWithOtherAppsActivity"
