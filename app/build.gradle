@@ -80,6 +80,13 @@ dependencies {
 
     //For recyclerViewActions in testing
     androidTestImplementation( "androidx.test.espresso:espresso-contrib:3.4.0")
+
+    //For video and audio playing
+    def exoplayer_version = "2.18.1"
+    implementation "com.google.android.exoplayer:exoplayer:$exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-core:$exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-dash:$exoplayer_version"
 }
 
 kapt {

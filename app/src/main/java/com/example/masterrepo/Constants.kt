@@ -5,6 +5,7 @@ import com.example.masterrepo.readwritefromresource.view.ReadWriteFromResourceAc
 import com.example.masterrepo.retrofit.view.RetrofitActivity
 import com.example.masterrepo.room.view.RoomActivity
 import com.example.masterrepo.sharedatawithotherapps.view.ShareDataWithOtherAppsActivity
+import com.example.masterrepo.videoplayfromlocalstorage.VideoPlayFromLocalStorageActivity
 
 object Constants {
     val entries = listOf<CardEntry>(
@@ -24,6 +25,10 @@ object Constants {
         CardEntry("ReadWriteResource",
             "Read from and write to the resource",
             ReadWriteFromResourceActivity::class.java as Class<AppCompatActivity>
-    )
+        ),
+        CardEntry("VideoPlayFromLocalStorage",
+            "Plays video stored in the local storage",
+            VideoPlayFromLocalStorageActivity::class.java as Class<AppCompatActivity>
+        ),
     )
 }
