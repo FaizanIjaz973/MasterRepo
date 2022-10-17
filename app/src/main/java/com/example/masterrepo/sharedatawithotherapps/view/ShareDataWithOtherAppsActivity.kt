@@ -58,7 +58,7 @@ class ShareDataWithOtherAppsActivity : AppCompatActivity() {
         val pi = PendingIntent.getBroadcast(
             this, 2,
             Intent(this, MyBroadCastReceiver::class.java),
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_IMMUTABLE
         )
         share = Intent.createChooser(share, null, pi.intentSender)
         startActivity(share)

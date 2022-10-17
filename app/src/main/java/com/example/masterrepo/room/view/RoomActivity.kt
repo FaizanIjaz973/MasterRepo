@@ -19,6 +19,7 @@ import com.example.masterrepo.room.adapter.RoomRecyclerViewAdapter
 import com.example.masterrepo.room.db.Entity
 import com.example.masterrepo.room.repository.RepoImplementation
 import com.example.masterrepo.room.viewmodel.RoomViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import kotlin.random.Random.Default.nextInt
@@ -36,7 +37,6 @@ class RoomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_room)
-        Log.d("MasterRepo", "In room Activity")
 
         // Setting up recycler view
         roomRecyclerViewAdapter = RoomRecyclerViewAdapter()
@@ -45,7 +45,7 @@ class RoomActivity : AppCompatActivity() {
         recyclerView.adapter = roomRecyclerViewAdapter
 
         // Button that saves the entry to the room db
-        val buttonAdd = findViewById<Button>(R.id.roomActivity_button_add)
+        val buttonAdd = findViewById<FloatingActionButton>(R.id.roomActivity_button_add)
         buttonAdd.setOnClickListener(View.OnClickListener {
             saveToDB()
         })
