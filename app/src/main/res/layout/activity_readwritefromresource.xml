@@ -15,7 +15,7 @@
     <Button
         android:id="@+id/readwritefromresourceActivity_buttonWrite"
         android:text="Write to File"
-        android:layout_margin="12dp"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </Button>
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/readwritefromresourceActivity_buttonRead"
         android:text="read from file"
-        android:layout_margin="12dp"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </Button>
